@@ -32,7 +32,7 @@ export class ProyectosComponent {
       repositorio: 'https://github.com/leonelhv/card-FrontEndMentor',
     },
     {
-      name: 'Reto de FrontEndMentor: Card',
+      name: 'Reto de FrontEndMentor: Tracking Page',
       description: 'Página responsiva mostrando un hero y un menu responsivo',
       img: 'assets/proyecto/tracking.png',
       status: statusProyectoEnum.public,
