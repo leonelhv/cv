@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 //Componentes
 import { HeaderComponent } from './header/header.component';
@@ -23,7 +23,7 @@ import { ContactoComponent } from './contacto/contacto.component';
     ProyectosComponent,
     ContactoComponent,
   ],
-  imports: [CommonModule, ReactiveFormsModule],
+  imports: [CommonModule, ReactiveFormsModule, FormsModule],
   exports: [
     HeaderComponent,
     MainComponent,
