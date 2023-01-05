@@ -12,6 +12,7 @@ import { TecnologiasComponent } from './tecnologias/tecnologias.component';
 import { ProyectosComponent } from './proyectos/proyectos.component';
 import { ContactoComponent } from './contacto/contacto.component';
 import { LogoComponent } from './logo/logo.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,7 @@ import { LogoComponent } from './logo/logo.component';
     ContactoComponent,
     LogoComponent,
   ],
-  imports: [CommonModule, ReactiveFormsModule, FormsModule],
+  imports: [CommonModule, ReactiveFormsModule, FormsModule, RouterModule],
   exports: [
     HeaderComponent,
     MainComponent,

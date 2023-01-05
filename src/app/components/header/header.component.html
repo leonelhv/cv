@@ -5,11 +5,14 @@
     <app-logo></app-logo>
     <nav class="mt-4 lg:mt-0">
       <ul class="flex flex-wrap justify-center items-center gap-x-3">
-        <li class="hover:text-blue-500 cursor-pointer">Inicio</li>
-        <li class="hover:text-blue-500 cursor-pointer">Sobre mí</li>
-        <li class="hover:text-blue-500 cursor-pointer">Tecnologias</li>
-        <li class="hover:text-blue-500 cursor-pointer">Proyectos</li>
-        <li class="hover:text-blue-500 cursor-pointer">Contacto</li>
+        <li
+          *ngFor="let sec of secciones"
+          class="hover:text-blue-500 cursor-pointer"
+          [routerLink]="'./'"
+          [fragment]="sec.path"
+        >
+          {{ sec.texto }}
+        </li>
       </ul>
     </nav>
   </div>

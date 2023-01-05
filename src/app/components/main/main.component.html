@@ -1,7 +1,7 @@
 <div class="bg-zinc-700 py-8">
-  <app-hero></app-hero>
-  <app-sobre-mi></app-sobre-mi>
-  <app-tecnologias></app-tecnologias>
-  <app-proyectos></app-proyectos>
-  <app-contacto></app-contacto>
+  <app-hero [id]="secciones[0].path"></app-hero>
+  <app-sobre-mi [id]="secciones[1].path"></app-sobre-mi>
+  <app-tecnologias [id]="secciones[2].path"></app-tecnologias>
+  <app-proyectos [id]="secciones[3].path"></app-proyectos>
+  <app-contacto [id]="secciones[4].path"></app-contacto>
 </div>
