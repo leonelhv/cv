@@ -1,14 +1,30 @@
 <div class="w-3/4 mx-auto my-20 text-white">
   <h2 class="text-3xl font-bold text-center mb-7">Contacto</h2>
   <div class="block p-6 rounded-lg shadow-lg bg-white max-w-md mx-auto">
-    <form>
+    <form [formGroup]="formContact">
       <div class="form-group mb-6">
         <input
           type="text"
           class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
           id="exampleInput7"
           placeholder="Nombres"
+          formControlName="nombre"
+          [ngClass]="{ 'border-red-600': campoNoValido('nombre') }"
         />
+        <div>
+          <p
+            class="text-sm text-red-600"
+            *ngIf="form['nombre']?.errors?.['required'] && form['nombre'].touched"
+          >
+            El nombre es requerido
+          </p>
+          <p
+            class="text-sm text-red-600"
+            *ngIf="form['nombre']?.errors?.['minlength'] && form['nombre'].touched"
+          >
+            Debe de tener como mínimo 10 caracteres
+          </p>
+        </div>
       </div>
       <div class="form-group mb-6">
         <input
@@ -16,7 +32,23 @@
           class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
           id="exampleInput8"
           placeholder="Email"
+          formControlName="email"
+          [ngClass]="{ 'border-red-600': campoNoValido('email') }"
         />
+        <div>
+          <p
+            class="text-sm text-red-600"
+            *ngIf="form['email']?.errors?.['required'] && form['email'].touched"
+          >
+            El email es requerido
+          </p>
+          <p
+            class="text-sm text-red-600"
+            *ngIf="form['email']?.errors?.['pattern'] && form['email'].touched"
+          >
+            El email no es válido
+          </p>
+        </div>
       </div>
       <div class="form-group mb-6">
         <textarea
@@ -24,7 +56,23 @@
           id="exampleFormControlTextarea13"
           rows="3"
           placeholder="Mensaje"
+          formControlName="mensaje"
+          [ngClass]="{ 'border-red-600': campoNoValido('mensaje') }"
         ></textarea>
+        <div>
+          <p
+            class="text-sm text-red-600"
+            *ngIf="form['mensaje']?.errors?.['required'] && form['mensaje'].touched"
+          >
+            El mensaje es requerido
+          </p>
+          <p
+            class="text-sm text-red-600"
+            *ngIf="form['mensaje']?.errors?.['maxlength'] && form['mensaje'].touched"
+          >
+            El mensaje solo puede tener un máximo de 500 caracteres
+          </p>
+        </div>
       </div>
 
       <button
