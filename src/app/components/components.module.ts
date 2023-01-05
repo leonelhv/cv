@@ -6,6 +6,7 @@ import { FooterComponent } from './footer/footer.component';
 import { HeroComponent } from './hero/hero.component';
 import { SobreMiComponent } from './sobre-mi/sobre-mi.component';
 import { TecnologiasComponent } from './tecnologias/tecnologias.component';
+import { ProyectosComponent } from './proyectos/proyectos.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { TecnologiasComponent } from './tecnologias/tecnologias.component';
     HeroComponent,
     SobreMiComponent,
     TecnologiasComponent,
+    ProyectosComponent,
   ],
   imports: [CommonModule],
   exports: [
@@ -24,6 +26,7 @@ import { TecnologiasComponent } from './tecnologias/tecnologias.component';
     HeroComponent,
     SobreMiComponent,
     TecnologiasComponent,
+    ProyectosComponent,
   ],
 })
 export class ComponentsModule {}

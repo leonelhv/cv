@@ -1,0 +1,37 @@
+<div class="w-3/4 mx-auto">
+  <h2 class="text-white text-3xl font-bold text-center">Proyectos</h2>
+
+  <div class="grid grid-cols-3 gap-4 text-white my-10">
+    <div *ngFor="let proy of proyectos" class="rounded-lg overflow-hidden">
+      <div class="w-full h-52">
+        <img class="w-full h-full object-cover" [src]="proy.img" alt="" />
+      </div>
+      <div class="bg-white text-black p-4 flex flex-col">
+        <h4 class="font-bold text-xl">{{ proy.name }}</h4>
+        <span
+          class="text-green-500 font-semibold"
+          [ngClass]="{ 'text-orange-500': proy.status === 'Proceso' }"
+          >Estado: {{ proy.status }}</span
+        >
+        <p class="flex-grow">{{ proy.description }}</p>
+        <div
+          *ngIf="proy.status !== 'Proceso'"
+          class="flex justify-between items-center my-2"
+        >
+          <a
+            class="bg-blue-500 py-2 px-4 rounded-lg"
+            [href]="proy.repositorio"
+            target="_blank"
+            >Repositorio</a
+          >
+          <a
+            class="bg-green-500 py-2 px-4 rounded-lg"
+            [href]="proy.demo"
+            target="_blank"
+            >Demo</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
