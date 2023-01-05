@@ -1,7 +1,7 @@
 <div class="w-3/4 mx-auto">
   <h2 class="text-white text-3xl font-bold text-center">Proyectos</h2>
 
-  <div class="grid grid-cols-3 gap-4 text-white my-10">
+  <div class="grid sm:grid-cols-2 xl:grid-cols-3 gap-8 text-white my-10">
     <div
       *ngFor="let proy of proyectos"
       class="rounded-lg overflow-hidden h-full flex flex-col"
@@ -10,28 +10,30 @@
         <img class="w-full h-full object-cover" [src]="proy.img" alt="" />
       </div>
       <div class="bg-white text-black p-4 flex flex-col flex-grow">
-        <h4 class="font-bold text-xl">{{ proy.name }}</h4>
-        <span
-          class="text-green-500 font-semibold"
-          [ngClass]="{ 'text-orange-500': proy.status === 'Proceso' }"
-          >Estado: {{ proy.status }}</span
-        >
-        <p class="flex-grow">{{ proy.description }}</p>
+        <div class="h-3/6 flex flex-col justify-between">
+          <h4 class="font-bold text-xl">{{ proy.name }}</h4>
+          <span
+            class="text-green-500 font-semibold"
+            [ngClass]="{ 'text-orange-500': proy.status === 'Proceso' }"
+            >Estado: {{ proy.status }}</span
+          >
+        </div>
+        <p class="flex-grow mt-3">{{ proy.description }}</p>
         <div
           *ngIf="proy.status !== 'Proceso'"
-          class="flex justify-between items-center mt-4"
+          class="flex justify-between items-center mt-4 text-white"
         >
           <a
-            class="bg-blue-500 py-2 px-4 rounded-lg"
+            class="bg-blue-500 py-2 px-2 xl:px-4 rounded-lg hover:scale-105"
             [href]="proy.repositorio"
             target="_blank"
-            >Repositorio</a
+            >Repositorio <span class="text-xs">🔗</span></a
           >
           <a
-            class="bg-green-500 py-2 px-4 rounded-lg"
+            class="bg-green-500 py-2 px-2 xl:px-4 rounded-lg hover:scale-105"
             [href]="proy.demo"
             target="_blank"
-            >Demo</a
+            >Demo <span class="text-xs">🌐</span></a
           >
         </div>
       </div>
