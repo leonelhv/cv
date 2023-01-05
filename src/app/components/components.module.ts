@@ -11,6 +11,7 @@ import { SobreMiComponent } from './sobre-mi/sobre-mi.component';
 import { TecnologiasComponent } from './tecnologias/tecnologias.component';
 import { ProyectosComponent } from './proyectos/proyectos.component';
 import { ContactoComponent } from './contacto/contacto.component';
+import { LogoComponent } from './logo/logo.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { ContactoComponent } from './contacto/contacto.component';
     TecnologiasComponent,
     ProyectosComponent,
     ContactoComponent,
+    LogoComponent,
   ],
   imports: [CommonModule, ReactiveFormsModule, FormsModule],
   exports: [
