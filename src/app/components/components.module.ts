@@ -7,6 +7,7 @@ import { HeroComponent } from './hero/hero.component';
 import { SobreMiComponent } from './sobre-mi/sobre-mi.component';
 import { TecnologiasComponent } from './tecnologias/tecnologias.component';
 import { ProyectosComponent } from './proyectos/proyectos.component';
+import { ContactoComponent } from './contacto/contacto.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { ProyectosComponent } from './proyectos/proyectos.component';
     SobreMiComponent,
     TecnologiasComponent,
     ProyectosComponent,
+    ContactoComponent,
   ],
   imports: [CommonModule],
   exports: [
@@ -27,6 +29,7 @@ import { ProyectosComponent } from './proyectos/proyectos.component';
     SobreMiComponent,
     TecnologiasComponent,
     ProyectosComponent,
+    ContactoComponent,
   ],
 })
 export class ComponentsModule {}
