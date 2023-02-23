@@ -53,7 +53,7 @@ export class ProyectosComponent {
       name: 'Ecommerce',
       description: 'Pequeño ecommerce hecho con Angular y Firebase',
       img: 'assets/proyecto/ecommerce.png',
-      status: statusProyectoEnum.inProcess,
+      status: statusProyectoEnum.public,
       demo: 'https://ecommerce-leonelhv.vercel.app/',
       repositorio: 'https://github.com/leonelhv/ecommerce',
     },
