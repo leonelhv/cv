@@ -41,7 +41,7 @@ export class ProyectosComponent {
         'https://github.com/leonelhv/project-tracking-intro-component-master',
     },
     {
-      name: 'Angular con Firebase',
+      name: 'Login en Angular con Firebase',
       description:
         'Utilizando angular y firebase para el login de un página web ',
       img: 'assets/proyecto/angularfirebase.png',
@@ -50,13 +50,12 @@ export class ProyectosComponent {
       repositorio: 'https://github.com/leonelhv/angularFirebase',
     },
     {
-      name: 'Clone de Spotify',
-      description:
-        'Es una página hecha en angular el cual utiliza el login con firebase y la API de Spotify para mostrar las canciones.Aun sigue en desarrollo',
-      img: 'assets/proyecto/spotify.png',
+      name: 'Ecommerce',
+      description: 'Pequeño ecommerce hecho con Angular y Firebase',
+      img: 'assets/proyecto/ecommerce.png',
       status: statusProyectoEnum.inProcess,
-      demo: '',
-      repositorio: 'https://github.com/leonelhv/spotify-clone',
+      demo: 'https://ecommerce-leonelhv.vercel.app/',
+      repositorio: 'https://github.com/leonelhv/ecommerce',
     },
   ];
 }
