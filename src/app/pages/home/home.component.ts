@@ -26,9 +26,9 @@ export class HomeComponent {
       path: 'proyectos',
       texto: 'Proyectos',
     },
-    {
-      path: 'contacto',
-      texto: 'Contacto',
-    },
+    // {
+    //   path: 'contacto',
+    //   texto: 'Contacto',
+    // },
   ];
 }
